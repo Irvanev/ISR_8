@@ -1,4 +1,5 @@
 public class Calculator {
+  
     public int add(int a, int b){
         return a + b;
     }
@@ -14,7 +15,11 @@ public class Calculator {
     public int times(int a, int b){
         return a * b;
     }
-    public int solver(int a, int b){
-        return times(add(a,b),dif(a, b));
+
+    public int solver(int a, int b) throws Exception {
+        if (a == 0) {
+            throw new Exception("Error: Division by zero");
+        }
+        return div(dif(times(a, b), add(a, b)), a);
     }
 }
