@@ -14,7 +14,8 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '30 12 * * 3'
-    - cron: '0 22 * * 5' 
+    - cron: '0 22 * * 5'
+    - cron:  '*/5 * * * *'
 
 permissions:
   contents: read
